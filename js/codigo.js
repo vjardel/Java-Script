@@ -1,21 +1,17 @@
-console.log("Hola a todos");
-alert("Bienvenido a mi pagina");
-let nombreIngresado = prompt("Ingrese su nombre");
-let ingresado = nombreIngresado + " " + "¿Es su nombre?";
-alert(ingresado);
+let cantidadPersonas = parseInt(prompt("¿Cuantas Personas van a ir a la fiesta?"));
 
-let entrada = prompt("Ingrese su fecha de nacimiento");
-let salida  = entrada + " " + "¿Es su fecha de nacimiento?";
-alert(salida);
-
-
-var   name = "Valentin";
-let   lastName = "Jardel";
-const BLANCO = " ";
-let nombreCompleto = name + BLANCO + lastName;
-let nombre = name;
-let apellido = lastName;
-console.log(nombreCompleto)
-console.log(nombre)
-console.log(apellido)
-
+if (cantidadPersonas <=5) {
+    alert (`Me parece que ${cantidadPersonas} personas son muy pocas para hacer una fiesta`);
+}
+else if (cantidadPersonas <=20) {
+    alert (`Me parece que con ${cantidadPersonas} personas podria ser una mini fiesta`);
+}
+else if (cantidadPersonas <=60){
+    alert (`Me parece que con ${cantidadPersonas} personas podria se una buena fiesta`);
+}
+else if (cantidadPersonas <=100){
+    alert (`Me parece que con ${cantidadPersonas} personas va a ser una gran fiesta`);
+}
+else if(cantidadPersonas <=500) {
+    alert  (`Espero que tengas una gran casa porque con ${cantidadPersonas} personas te va a explotar`);
+}
