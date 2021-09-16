@@ -1,17 +1,25 @@
-let cantidadPersonas = parseInt(prompt("¿Cuantas Personas van a ir a la fiesta?"));
 
-if (cantidadPersonas <=5) {
-    alert (`Me parece que ${cantidadPersonas} personas son muy pocas para hacer una fiesta`);
+let entrada = prompt("Ingresar un nombre");
+while(entrada != "ESC"){
+   switch (entrada) {
+       case "Brian":
+            alert("Bienvenido Brian");
+            break;
+        case "Valentin":
+            alert("Hola Valentín, bienvenido a tu página");
+            break;
+       default:
+           alert("No eres bienvenido a esta página")
+           break;
+   }
+   entrada = prompt("Ingresar un nombre");
 }
-else if (cantidadPersonas <=20) {
-    alert (`Me parece que con ${cantidadPersonas} personas podria ser una mini fiesta`);
+for (let i = 1; i <= 2; i++) {
+    let ingresarNombre = prompt("Ingresar nombre");
+    let ingresarApellido = prompt("Ingresar apellido")
+    alert(" Turno  N° "+i+" Nombre: "+ingresarNombre+ " " + ingresarApellido);
+    console.log(" Turno  N° "+i+" Nombre: "+ingresarNombre + " / Apellido: "+ingresarApellido )
 }
-else if (cantidadPersonas <=60){
-    alert (`Me parece que con ${cantidadPersonas} personas podria se una buena fiesta`);
-}
-else if (cantidadPersonas <=100){
-    alert (`Me parece que con ${cantidadPersonas} personas va a ser una gran fiesta`);
-}
-else if(cantidadPersonas <=500) {
-    alert  (`Espero que tengas una gran casa porque con ${cantidadPersonas} personas te va a explotar`);
-}
+
+
+
