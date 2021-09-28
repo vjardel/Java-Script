@@ -1,4 +1,4 @@
-const valorProducto = 6200;
+/*const valorProducto = 6200;
 const valorDescuentoTalleS = 0.9;
 const valorDescuentoTalleL = 0.8;
 const iva   = x => x * 0.21;
@@ -9,6 +9,7 @@ const precio = () =>{
     let cantidadBuzosTalleS = parseInt(prompt("Cantidad de buzos talles S (10% de descuento)"));
     let cantidadBuzosTalleM = parseInt(prompt("Cantidad de buzos talles M (No tiene descuento)"));
     let cantidadBuzosTalleL = parseInt(prompt("Cantidad de buzos talles L (20% de descuento)"));
+    let totalDeBuzos= suma((cantidadBuzosTalleS,cantidadBuzosTalleM),cantidadBuzosTalleL);
     let valorTalleS =  multiplicacion(multiplicacion(suma(valorProducto, iva(valorProducto)),cantidadBuzosTalleS),valorDescuentoTalleS);
     let valorTalleM =  multiplicacion(suma(valorProducto, iva(valorProducto)),cantidadBuzosTalleM);
     let valorTalleL =  multiplicacion(multiplicacion(suma(valorProducto, iva(valorProducto)),cantidadBuzosTalleL),valorDescuentoTalleL);
@@ -18,3 +19,28 @@ const precio = () =>{
     alert("El precio total de su compra es de "+valorTotal)
 }
 precio();
+*/
+
+class Producto {
+    constructor(nombre, precio, cantidad, stock) {
+        this.nombre  = nombre.toUpperCase();
+        this.precio  = parseFloat(precio);
+        this.vendido = false;
+        this.cantidad = cantidad;
+        this.stock = stock;
+    }
+
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+        this.precio = this.precio * this.cantidad;
+    }
+    vender() {
+        this.vendido = true;
+        this.stock = this.stock - this.cantidad;
+    }
+}
+const producto1 = new Producto("Buzo", "6200",parseInt(prompt("Cantidad de buzos")), 20 );
+console.log(producto1);
+producto1.sumaIva();
+producto1.vender();
+

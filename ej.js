@@ -183,9 +183,9 @@ Ejercicio: Agencia vuelos:
 const valorTiquete = 500;
 const valorDescuentoNinos = 0.9;
 const multiplicacion = (a,b) => a*b;
-const suma = (a,b) => a+b;
+const suma = (a,b) => a+b;*/
 
-const calcularPrecio = () => {
+/*const calcularPrecio = () => {
     let cantindadAdultos = parseInt(prompt("Cantindad de Adultos"));
     let cantidadNinios = parseInt(prompt("Cantidad de Niños"));
     let valorAdulto = multiplicacion(valorTiquete, cantindadAdultos);
@@ -195,4 +195,47 @@ const calcularPrecio = () => {
     console.log(valorFinal)
 }
 calcularPrecio();
+
+
+IVA PRODUCTO
+
+function Producto(nombre, precio){
+    this.nombre = nombre;
+    this.precio = precio;
+    this.precioConIva = function(){
+        this.precio = this.precio * 1.21;
+    }
+}
+const nuevoProducto = new Producto("Leche", 500);
+console.log(nuevoProducto);
+nuevoProducto.precioConIva();
+console.log(nuevoProducto);
+
+
+CARRITO DE COMPRA
+
+class Producto {
+    constructor(nombre, precio, stock) {
+        this.nombre  = nombre.toUpperCase();
+        this.precio  = parseFloat(precio);
+        this.vendido = false;
+        this.stock = stock;
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+    vender() {
+        this.vendido = true;
+        this.stock = this.stock - 1;
+    }
+}
+const producto1 = new Producto("arroz", "125", 2);
+const producto2 = new Producto("fideo", "50", 2);
+producto1.sumaIva();
+producto2.sumaIva();
+producto1.vender();
+
+console.log(producto1);
+console.log(producto2);
+
 */
