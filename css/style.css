@@ -57,4 +57,11 @@
  aside {
     grid-area: publicidad;
  }
- 
+ .buzo{
+     text-align: center;
+     text-decoration: none;
+     color: white;
+     background-color: black;
+     border-radius: 4px;
+     margin: 0px 100px 0px 100px;
+ }
