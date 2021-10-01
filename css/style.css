@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 0px;
+}
+.buscar_texto{
+    font-size: 20px;
+    float: left;
+    line-height: 50px;
+    border: 0px;
+    width: 250px;
+}
+.boton{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    height: 50px;
+}
+.logo{
+    margin-left: 260px;
+}
+.buzos-grid{
+    display: grid;
+    grid-template-areas:
+      "publicidad  productos"
+      "publicidad productos "
+      "publicidad productos "
+      "footer footer ";
+    grid-template-rows: 1000px 75px; 
+    grid-template-columns: 10% auto 15%;
+ }
+
+
+ footer {
+    grid-area: footer;
+ }
+ section#productos {
+    grid-area: productos;     
+ }
+ aside {
+    grid-area: publicidad;
+ }
+ 

@@ -238,4 +238,49 @@ producto1.vender();
 console.log(producto1);
 console.log(producto2);
 
+
+EJEMPLO APLICADO
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre  = nombre.toUpperCase();
+        this.precio  = parseFloat(precio);
+        this.vendido = false;
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+}
+//Declaramos un array de productos para almacenar objetos
+const productos = [];
+productos.push(new Producto("arroz", "125"));
+productos.push(new Producto("fideo", "70"));
+productos.push(new Producto("pan", "50"));
+//Iteramos el array con for...of para modificarlos a todos
+for (const producto of productos){
+    producto.sumaIva();
+}
+console.log(productos)
+
+OTRO ELEMENTO APLICADO
+const productos = [{ id: 1,  producto: "Arroz", precio: 125 },
+                  {  id: 2,  producto: "Fideo", precio: 70 },
+                  {  id: 3,  producto: "Pan"  , precio: 50},
+                  {  id: 4,  producto: "Flan" , precio: 100}];
+
+const buscarPan = productos.find(producto => producto.id === 3); 
+console.log(buscarPan);//{id: 3, producto: "Pan", precio: 50}
+
+const baratos = productos.filter(producto => producto.precio < 100); 
+console.log(baratos);//
+[{id: 2,producto:"Fideo",precio:70},{id:3,producto:"Pan",precio: 50}]
+
+const aumentos = productos.map(producto => {
+    return{
+        id: producto.id,
+        producto: producto.producto,
+        precio: producto.precio += 30
+    }
+});
+console.log(aumentos);
+
 */
