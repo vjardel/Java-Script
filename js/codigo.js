@@ -21,7 +21,7 @@ const precio = () =>{
 precio();
 */
 
-/*class Producto {
+class Producto {
     constructor(nombre, talle, precio, cantidad, stock) {
         this.nombre  = nombre.toUpperCase();
         this.talle = talle;
@@ -47,7 +47,7 @@ productos.push(new Producto("Buzo","M", "6350",parseInt(prompt("Cantidad de buzo
 for (const producto of productos){
     producto.sumaIva();
 }
-console.log(productos);*/
+console.log(productos);
 
 //ORDENAR UN ARRAY DE OBJETOS
     const arrayProductos = [
