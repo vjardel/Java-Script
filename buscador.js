@@ -2,44 +2,35 @@ let posicionSugerido = null;
 
 const productosSugeridos = ["Adidas", "Jordan", "Nasa", "Thrasher"];
 
-// -------- CONSTANTES ELEMENTOS DEL DOM
 const sugeridos = document.getElementById("sugeridos");
 
 const insertarBusquedasSugeridas = () => {
   for (const sugerido of productosSugeridos) {
-    let li = document.createElement("li"); // Nueva Etiqueta
+    let li = document.createElement("li"); 
     li.innerHTML = sugerido;
-    sugeridos.append(li) //Insertar etiqueta en el UL
+    sugeridos.append(li) 
   }
 } 
 
 const removerBusquedasSugeridas = () => {
   sugeridos.innerHTML = '';
 }
-
-// CÓDIGO DE INPUT DE MI BUSCADOR
 const input = document.getElementById("buscador-producto");
-
-/* Usando los eventos BLUR y FOCUS de un input 
-Focus: Cuando estoy parado sobre un input
-Blur: Cuando quito el focus sobre un input
-*/
 input.onfocus = () => insertarBusquedasSugeridas();
 input.addEventListener("blur", removerBusquedasSugeridas);
 
 
 
 input.onkeydown = (e) => {
-  if (e.keyCode == '38') { // 38 corresponde al key code de flecha hacia arriba;
+  if (e.keyCode == '38') { 
     console.log("Flecha hacia arriba");
     if (posicionSugerido === 0 || posicionSugerido === null) {
-      // Cuando llego a 0, o es la primera iteración, quiero que vaya al úlitmo valor de la lista
       posicionSugerido = productosSugeridos.length - 1;
     }
-    else  posicionSugerido --; // Resto un valor para que 
+    else  posicionSugerido --; 
     input.value = productosSugeridos[posicionSugerido];
   }
-  else if (e.keyCode == '40') { // 40 corresponde al key code de flecha hacia abajo;
+  else if (e.keyCode == '40') { 
     console.log("Flecha hacia abajo");
     if (posicionSugerido === (productosSugeridos.length - 1)) {
       posicionSugerido = 0;

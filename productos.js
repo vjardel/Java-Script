@@ -32,15 +32,10 @@ const productos = [
       imagen: `img/buzo10.png`,
       precio: `3,000`},];
 
-// -------- CONSTANTES ELEMENTOS DEL DOM
+
 const listadoProductos = document.getElementById("listado");
 const prodocutoLocalStorage = JSON.parse(localStorage.getItem("canasta"));
 
-// -------- FUNCIONES 
-/* 
-  EJEMPLO DE USO DEL ONCLICK
-  Función para crear productos dinámicamente y crearlos en el contenedor 
-*/
 const insertarProductos = () => {
   for (const producto of productos) {
     let contenidoProducto = document.createElement("li");
@@ -53,18 +48,11 @@ const insertarProductos = () => {
       <p class="nombre">${producto.nombre}</p>
       <p class="precio">$${producto.precio}</p>`;
 
-    // Puedo definir un evento on click a un elemento que estoy creando dinámicamente
     contenidoProducto.onclick = () => insertarProductosACanasta(producto);
-    // contenidoProducto.addEventListener("click", () => {insertarProductosACanasta(producto)});
     listadoProductos.appendChild(contenidoProducto);
   }
 }
-
-//CÓDIGO
 insertarProductos();
-
-
-// Recorrer los productos del LocalStorage para insertarlos en la canasta
 if (prodocutoLocalStorage !== null) {
   for (const producto of prodocutoLocalStorage) {
     insertarProductosACanasta(producto);
