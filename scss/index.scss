@@ -1,0 +1,138 @@
+.contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+.contenido-productos {
+    flex: 1;
+}
+
+#titulo {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.texto {
+    text-align: center;
+}
+
+/* Buscador de productos */
+.buscador {
+    text-align: center;
+    position: relative;
+}
+
+#sugeridos {
+    position: absolute;
+    padding: 0; 
+    list-style: none;
+    background-color:lavender;
+    width: 300px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#buscador-producto {
+    width: 300px;
+    height: 40px;
+}
+
+/* Contenido Productos */
+#listado {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 250px;
+    margin-right: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.producto img {
+    width: 100%;
+}
+
+.imagen-producto {
+    width: 191px;
+    height: 226px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre {
+    font-size: 16px;
+    color: rgb(46, 44, 54);
+}
+
+.precio {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.canasta {
+    min-width: 400px;
+    max-width: 400px;
+    border-left: 1px solid #ececec;
+    text-align: center;
+    padding: 20px 0 0 0;
+    background-color: #efefef;
+    position: relative;
+}
+
+#canasta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.total-canasta {
+  padding: 10px 0;
+  border-top: 1px solid gray;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+#total-pagar {
+  font-size: 22px;
+  color: darkgreen;
+  font-weight: 600;
+}
+
+/* Contenido Producto en canasta */
+.producto-canasta {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.producto-canasta img {
+    width: 150px;
+}
+
+.descripcion-producto {
+    text-align: left;
+    padding: 20px;
+}
+
+.boton-eliminar {
+    cursor: pointer;
+    background-color: darkgreen;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: none;
+    border: none;
+}

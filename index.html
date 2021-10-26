@@ -4,116 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto JavaScript</title>
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="styles.css">
-    <link href="css/custom.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="conteiner">
-        <nav id="paddingIndex" class="navbar navbar-expand-lg navbar-light " style="background-color: black;">
+          <nav class="navbar navbar-light bg-black">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white;"  href=""><strong>NEW IN</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href=""><strong>HOMBRE</strong></a>
-                    </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="color: white;"><strong>MUJER</strong></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="color: white;"><strong>NIÑO</strong></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="color: white;"><strong>MARCA</strong></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="" style="color: white;"><strong>SALE</strong></a>
-                  </li>
-                </ul>
-                <input type="text" class="buscar_texto">
-                <a href="" class="boton">
-                  <i class="icon-buscar"></i>
+              <a href="#">
+                <img class="logo" src="img/b.png" alt="Logo">
+            </a>
+              <div class="d-flex">
+                <a href="https://www.instagram.com/valentin_jardel/?hl=es-la">
+                  <img class="redes-tamaño" src="img/ig.png"  alt="Logo de ig">
+                </a>
+                <a href="https://twitter.com/valen_jardel">
+                  <img class="redes-tamaño" src="img/twt.png"  alt="Logo de twitter">
                 </a>
               </div>
-              <div class="d-flex">
-                <a class="navbar-brand" href="#">
-                    <img class="logo" src="img/b.png" alt="Logo" width="75">
-                </a>
             </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg navbar-light bg-black">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>NEW IN</strong></a>
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>HOMBRE</strong></a>
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>MUJER</strong></a>
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>NIÑO</strong></a>
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>MARCA</strong></a>
+                    <a class="navbar-brand" style="color: white;" href="#"><strong>SALE</strong></a>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><img src="img/lupa.png"  alt=""></button>
+                </form>
+              </div>
             </div>
           </nav>
 
   </header>
   <main>
-    <div id="screen" class="content-section-b">
-       
-      <div class="row wow bounceInUp" >
-            <div id="owl-demo" class="owl-carousel">
-      
-      <a href="#" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo1.jpg"  alt="Owl Image">
-          <p class="buzo">Buzo Adidas Talle M $6350</p>
+    <div class="contenedor">
+      <div class="contenido-productos">
+        <div id="titulo">
+          <h1>Buzos</h1>
         </div>
-      </a>
-      
-             <a href="#" target="_blank" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo2.jpg"  alt="Owl Image">
-          <p class="buzo">Buzo New York Talle M $6350</p>
-        </div>
-      </a>
-      
-      <a href="#" target="_blank" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo3.jpg"  alt="Owl Image">
-          <p class="buzo">Buzo Jordan Talle S $6200</p>
-        </div>
-      </a>
-      
-      <a href="#" target="_blank" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo4.jpg"  alt="Owl Image">
-          <p class="buzo">Buzo Jordan Talle S $6200</p>
-        </div>
-      </a>
-      <a href="#" target="_blank" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo5.JPG"  alt="Owl Image">
-          <p class="buzo">Buzo Supreme Talle S $6200</p>
-        </div>
-      </a>
-      <a href="#" target="_blank" class="">
-        <div class="item">
-          <img  class="img-responsive img-rounded" src="img/buzo6.jpg"  alt="Owl Image">
-          <p class="buzo">Buzo Tommy Hilfiger Talle S $6200</p>
-        </div>
-      </a>
-            </div>       
+  
+        <div>
+          <h3 class="texto">Listado de productos</h3>
+          <div class="buscador">
+            <form id="formulario-buscador">
+              <input autocomplete="off" id="buscador-producto" type="text" placeholder="Buscar un producto" name="producto">
+            </form>
+            <ul id="sugeridos"></ul>
+          </div>
+          <ul id="listado"></ul>
         </div>
       </div>
+      <div class="canasta">
+        <h4>Canasta</h4>
+        <div id="canasta"></div>
+        <div class="total-canasta">
+          <p>Total a pagar</p>
+          <p id="total-pagar">$0</p>
+          <a href="factura.html">Ir a Pagar</a>
+        </div>
+      </div>
+    </div>
+    <script src="canasta.js"></script>
+    <script src="productos.js"></script>
+    <script src="buscador.js"></script>
    
   </main>
 
 
 
-
-    <script src="js/codigo.js"></script>
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="canasta.js"></script>
+  <script src="productos.js"></script>
+  <script src="buscador.js"></script>
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script> 
+    
 </body>
 </html>

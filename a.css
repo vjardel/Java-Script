@@ -1,0 +1,51 @@
+#buzos{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	
+}
+#buzoTalleM{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.productos{
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	margin: 0 2% 2% 0 !important;
+}
+.descripcion-producto{
+	text-align: center;
+	padding: 20px;
+}
+.buzoTitulo{
+	text-align: center;
+	display: block;
+}
+.nombreIndex{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 1px;
+	margin-bottom: 0px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.precioIndex{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 4px;
+	margin-top: 0px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.imgIndex{
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+#canasta{
+	display: flex;
+	flex-wrap: wrap;
+}

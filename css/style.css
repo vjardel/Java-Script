@@ -1,67 +1,170 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.nav-item{
-    color: black;
-    display: block;
-    text-transform: uppercase;
-    margin-right: 40px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-}
-.buscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border: 0px;
-}
-.buscar_texto{
-    font-size: 20px;
-    float: left;
-    line-height: 50px;
-    border: 0px;
-    width: 250px;
-}
-.boton{
-    text-decoration: none;
-    font-size: 30px;
-    color: black;
-    background-color: white;
-    height: 50px;
-}
-.logo{
-    margin-left: 260px;
-}
-.buzos-grid{
-    display: grid;
-    grid-template-areas:
-      "publicidad  productos"
-      "publicidad productos "
-      "publicidad productos "
-      "footer footer ";
-    grid-template-rows: 1000px 75px; 
-    grid-template-columns: 10% auto 15%;
- }
+@charset "UTF-8";
+/*------------------------------GENERALES------------------------------*/
+* {
+  margin: 0;
+  padding: 0; }
 
+body {
+  font-family: 'PT Sans', sans-serif; }
 
- footer {
-    grid-area: footer;
- }
- section#productos {
-    grid-area: productos;     
- }
- aside {
-    grid-area: publicidad;
- }
- .buzo{
-     text-align: center;
-     text-decoration: none;
-     color: white;
-     background-color: black;
-     border-radius: 4px;
-     margin: 0px 100px 0px 100px;
- }
+/*------------------------------HEADER------------------------------*/
+.logo {
+  margin-left: 15px; }
+
+.redes-tamaño {
+  align-items: center;
+  width: 30px;
+  margin: 0px 15px 0px 5px; }
+
+.navbar-brand {
+  color: black;
+  text-transform: uppercase;
+  margin-right: 400px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 16px; }
+
+.boton {
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  background-color: white;
+  height: 50px; }
+
+.headerTop {
+  background-color: black; }
+
+.contenedor {
+  display: flex;
+  height: 100vh; }
+
+.contenido-productos {
+  flex: 1; }
+
+#titulo {
+  text-align: center;
+  padding-bottom: 50px; }
+
+.texto {
+  text-align: center; }
+
+/* Buscador de productos */
+.buscador {
+  text-align: center;
+  position: relative; }
+
+#sugeridos {
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  background-color: lavender;
+  width: 300px;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+
+#buscador-producto {
+  width: 300px;
+  height: 40px; }
+
+/* Contenido Productos */
+#listado {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  flex-wrap: wrap; }
+
+.producto {
+  width: 250px;
+  margin-right: 10px;
+  list-style: none;
+  cursor: pointer; }
+
+.producto img {
+  width: 100%; }
+
+.imagen-producto {
+  width: 191px;
+  height: 226px;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+
+.nombre {
+  font-size: 16px;
+  color: #2e2c36; }
+
+.precio {
+  font-weight: 600;
+  font-size: 24px; }
+
+.canasta {
+  min-width: 400px;
+  max-width: 400px;
+  border-left: 1px solid #ececec;
+  text-align: center;
+  padding: 20px 0 0 0;
+  background-color: #efefef;
+  position: relative; }
+
+#canasta {
+  display: flex;
+  flex-wrap: wrap; }
+
+.total-canasta {
+  padding: 10px 0;
+  border-top: 1px solid gray;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px; }
+
+#total-pagar {
+  font-size: 22px;
+  color: darkgreen;
+  font-weight: 600; }
+
+/* Contenido Producto en canasta */
+.producto-canasta {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative; }
+
+.producto-canasta img {
+  width: 150px; }
+
+.descripcion-producto {
+  text-align: left;
+  padding: 20px; }
+
+.boton-eliminar {
+  cursor: pointer;
+  background-color: darkgreen;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: none;
+  border: none; }
+
+.factura {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; }
+
+.factura p {
+  padding: 10px 0;
+  color: darkolivegreen;
+  font-size: 22px; }
+
+#pagar {
+  font-size: 26px;
+  color: chocolate;
+  font-weight: 600; }
