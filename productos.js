@@ -1,60 +1,85 @@
-const productos = [
-  {id: 1,
+  // -------- CONSTANTES NEGOCIO
+  const productos = [
+    {
+      id: 1,
       nombre: `Buzo Adidas Talle M`,
       imagen: `img/buzo1.png`,
-      precio: `7,490`},
+      precioLabel: `7,490`,
+      precio: 7490,
+      cantidad: 1},
     {  id: 2,
         nombre: `Buzo Jordan Talle M`,
         imagen: `img/buzo3.png`,
-        precio: `8,699` },
+        precioLabel: `8,699`,
+        precio: 8699, 
+        cantidad: 1 },
     {  id: 3,
         nombre: `Buzo Jordan Talle M`  ,
         imagen: `img/buzo4.png`,
-        precio: `10,999`},
+        precioLabel: `10,999`,
+        precio: 10999,
+        cantidad: 1},
   {  id: 4,
       nombre: `Buzo Tommy Hilfiger Talle M` ,
       imagen: `img/buzo6.png`,
-      precio: `16,500`},
+      precioLabel: `16,500`,
+      precio: 16500,
+      cantidad: 1},
   {  id: 5, 
       nombre: `Buzo Hoodie Nba Talle S`  ,
       imagen: `img/buzo7.png`,
-      precio: `6,200`},
+      precioLabel: `6,200`,
+      precio: 6200,
+      cantidad: 1},
   {  id: 6,
       nombre: `Buzo Rosa Minimalista Talle S`  ,
       imagen: `img/buzo8.png`,
-      precio: `3,500`},
+      precioLabel: `3,500`,
+      precio: 3500,
+      cantidad: 1},
   {  id: 7,
       nombre: `Buzo Nasa Talle S`  ,
       imagen: `img/buzo9.png`,
-      precio: `3,200`},
+      precioLabel: `3,200`,
+      precio: 3200,
+      cantidad: 1},
   {  id: 8,
       nombre: `Buzo Thrasher Talle S`  ,
       imagen: `img/buzo10.png`,
-      precio: `3,000`},];
+      precioLabel: `3,000`,
+      precio: 3000,
+      cantidad: 1
+    }];
+    
+jQuery(() => {
 
+  const prodocutoLocalStorage = JSON.parse(localStorage.getItem("canasta"));
 
-const listadoProductos = document.getElementById("listado");
-const prodocutoLocalStorage = JSON.parse(localStorage.getItem("canasta"));
-
-const insertarProductos = () => {
-  for (const producto of productos) {
-    let contenidoProducto = document.createElement("li");
-    contenidoProducto.className = "producto";
-    contenidoProducto.id = producto.id;
-    contenidoProducto.innerHTML = `
+ 
+  const insertarProductos = () => {
+    for (const producto of productos) {
+      $('#listado').append(`
+    <li class="producto" id="${producto.id}">
       <div class="imagen-producto">
         <img src="${producto.imagen}" alt="">
       </div>
       <p class="nombre">${producto.nombre}</p>
-      <p class="precio">$${producto.precio}</p>`;
+      <p class="precio">$${producto.precioLabel}</p>
+    </li>`);
 
-    contenidoProducto.onclick = () => insertarProductosACanasta(producto);
-    listadoProductos.appendChild(contenidoProducto);
+      $(`#${producto.id}`).on("click", function () {
+        insertarProductosACanasta(producto);
+      });
+    }
   }
-}
-insertarProductos();
-if (prodocutoLocalStorage !== null) {
-  for (const producto of prodocutoLocalStorage) {
-    insertarProductosACanasta(producto);
+
+  insertarProductos();
+
+
+  if (prodocutoLocalStorage !== null) {
+    for (const producto of prodocutoLocalStorage) {
+      insertarProductosACanasta(producto);
+    }
   }
-}
+
+});

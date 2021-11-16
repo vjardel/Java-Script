@@ -25,12 +25,13 @@ input.onkeydown = (e) => {
   if (e.keyCode == '38') { 
     console.log("Flecha hacia arriba");
     if (posicionSugerido === 0 || posicionSugerido === null) {
+
       posicionSugerido = productosSugeridos.length - 1;
     }
     else  posicionSugerido --; 
     input.value = productosSugeridos[posicionSugerido];
   }
-  else if (e.keyCode == '40') { 
+  else if (e.keyCode == '40') { ;
     console.log("Flecha hacia abajo");
     if (posicionSugerido === (productosSugeridos.length - 1)) {
       posicionSugerido = 0;
